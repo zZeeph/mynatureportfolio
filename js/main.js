@@ -64,16 +64,4 @@ $(function () {
     })
   })
 
-  const nav = document.querySelector('#header');
-  const btn = document.querySelector('.toggle-btn');
-  const mask = document.querySelector('#mask');
-
-  btn.onclick = () => {
-    nav.classList.toggle('open');
-  }
-
-  mask.onclick = () => {
-    nav.classList.toggle('open');
-  }
-
 }
