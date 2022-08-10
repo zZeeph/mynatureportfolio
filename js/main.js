@@ -10,13 +10,22 @@ $(function () {
     
 });
 
-  document.addEventListener('scroll', function() {
-    const scrollY = window.pageYOffset;
+  const headerElement = document.getElementById('header');
 
-    if(scrollY > 450) {
-      document.getElementById('header').classList.add('active');
-    } else {
-      document.getElementById('header').classList.remove('active');
+  let scrollPoint = 0
+  let lastPoint= 0
+
+  document.addEventListener('scroll', function() {
+    scrollPoint = window.pageYOffset;
+
+    if (document.getElementById('topArea').getBoundingClientRect().bottom < 0) {
+      if (scrollPoint > lastPoint) {
+        headerElement.classList.add('active');
+      } else {
+        headerElement.classList.remove('active');
+      }
+
+      lastPoint = scrollPoint
     }
   });
 

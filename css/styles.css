@@ -659,10 +659,8 @@ img {
 
 #production-header h1 {
   font-family: 'Courier New', Courier, monospace;
-  /* border-bottom: 5px solid rgb(32, 11, 1); */
   margin-bottom: 0;
   margin-bottom: 50px;
-  /* text-align: center; */
 }
 
 #production-main {
